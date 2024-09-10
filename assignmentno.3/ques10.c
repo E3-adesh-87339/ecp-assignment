@@ -19,7 +19,7 @@ int main()
  int num,i=1,sum=0;
  printf("enter the number of which you want to print the table\n");
  scanf("%d",&num);
- while(i<=10)
+ for(i=1;i<=10;i++)
  { 
  		sum = sum + num;
 		printf("%d X %d = %d\n",num,i,res);

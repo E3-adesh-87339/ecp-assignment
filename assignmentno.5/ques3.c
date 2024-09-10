@@ -1,6 +1,6 @@
-//Write a function to reverse the array elements.
+//Write a function to reverse the array elements.                    not complete
 
-
+                                                      
 #include<stdio.h>
 #include<string.h>
 

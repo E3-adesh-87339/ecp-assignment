@@ -33,8 +33,8 @@ float print_marks(float *a,int len)
 
 {
  printf("marks :\n");
-for(int i=0;i<len;i++)
-printf("%.2f\t",a[i]);
+for(int i=1;i<=len;i++)
+printf("subject %d = %.2f\n",i,a[i]);
 printf("\n");
 }
 
