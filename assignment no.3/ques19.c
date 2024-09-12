@@ -18,21 +18,19 @@ Output:
 #include <stdio.h>
 int main()
 {
-int n1,n2;
+int n1,n2,i;
 printf("enter the range of number between which you want to print the table :\n");
 scanf("%d%d",&n1,&n2);
-     if(int i<=n1 && i<=n2)
-	 {
- 	for (int i=1; i<=10;i++)
-	
-	 {
-		for(int j=1;j<=10;j++)
+printf("tables in range are :\n");
+ 	for ( i=1; i<=10;i++)	
+	 {    
+	 
+		for(int j=n1;j<=n2;j++)
 		{	
 			int sum = i*j;
 			printf("%d\t",sum);
 		}
 		printf("\n");
-	}
 	}
 	
 
