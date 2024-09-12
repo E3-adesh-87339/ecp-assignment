@@ -1,23 +1,24 @@
 //Using global variables (for result)
 #include <stdio.h>
   
-  int rsum,rprod;
- int calc(int n1,int n2,int *mul);
- int main()
-  {	
-  	int n1=10,n2=20;
-	rsum = calc(n1,n2,mul);
-	rprod = calc(n1,n2,&mul);
-	printf("sum of two no, is %d\n",rsum);
-	printf("product of two no. is %d\n",rprod);
+  int rsum;
+  int calc(int n1,int n2,int *mul);
+  
+  int main()
+{	
+  	int n1=40,n2=2,mul;
+
+	rsum = calc(n1,n2,&mul);
 	 
-	 return 0;
-	 }
+	printf("product of two no. is %d\n",mul);
+	printf("sum of two no. is %d\n",rsum);
+    return 0;
+ }
 
-int calc(int n1,int n2)
+int calc(int n1,int n2, int *mul)
 {
-
- return n1+n2;
+	*mul = n1 * n2;
+	return n1+n2;
 
 
 }
