@@ -1,35 +1,52 @@
-//Write a function to reverse the array elements.                    not complete
+	                               //Write a function to reverse the array elements.                 
 
-                                                      
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+
+
+// Function to reverse the array
+void reverse(int *arr, int n){
+
+    int rarr[n];
+    // Reversing the array using an auxiliary array
+    for (int i = 0; i < n; i++)
+    {
+        rarr[i] = arr[n - i - 1];
+    }
+
+    // Copying the reversed array to the original array
+    for (int i = 0; i < n; i++)
+    {
+        arr[i] = rarr[i];
+    }
+printf("Reversed array: ");
+      for (int i = 0; i < n; i++)
+      {
+          printf("%d ", arr[i]);
+      }
 
 }
 
 int main()
 {
+    
 
-char arr[12]={1,2,3,4,5,6,7,8,9};
-printf("array is :\n");
-for (int i=0;i<10;i++)
-{
-printf("%d\t",arr[i]);
-}
-int len,i,j,rev,a;
-len = strlen(arr);
-printf("length og string is %d",len);
+	 int n;
+     int arr[n];
+    // Inputting the size of the array
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
 
-for (i=0;i<len;i++)
-{
-  
-	for(j=len;j>i;j++)
-		{
-			a = arr[i];
-			&arr[i]=arr[j];
-			&arr[j]=a;
-	rev=arr[i];
-	}
+    // Inputting the array
+    printf("Enter an array: ");
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    // Calling the function to reverse the array
+    reverse(arr, n);
+
+    return 0;
 }
-printf("%d\t",rev);
-return 0;
-}
+ 
+

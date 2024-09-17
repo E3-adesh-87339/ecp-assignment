@@ -1,47 +1,43 @@
+//Write a program to crate four function calculator. Four functions are +, - , *, /
 #include<stdio.h>
 
-
-int main( )
+int main()
 {
-	int emp_id , dept_no;
-	char dc;
 
-	printf("Enter The Employee ID : ");
-	scanf("%d",&emp_id);
-	printf("Enter Dept No.        :");
-	scanf("%d",&dept_no);
-	printf("Enter Designation Code:");
-	scanf("%*c%c",&dc);
+	int num1 , num2 , res ;
+	char op;
+	printf("Enter the 1 value : ");
+	scanf("%d",&num1);
+	printf("Enter the OPerator [+ , - * / ] : ");
+	scanf("%*c%c",&op);
+	printf("Enter the 2 value :");
+	scanf("%d",&num2);
 
-	switch( dept_no  )
+	switch( op )
 	{
-		case 10:printf("Employee with EMP id :%d working in Marketing Department\n ",emp_id);
-				break;
-		case 20:printf("Employee with EMP id :%d working in Management Department \n",emp_id);
-				break;
-		case 30:printf("Employee with EMP id :%d working in Management Department\n ",emp_id);
-				break;
-		case 40:printf("Employee with EMP id :%d working in Management Department\n ",emp_id);
-				break;
-		
-		
-		default : printf("Invalid Dept Number \n");
+		case '+' :res =  num1 + num2 ;
+				  printf("Add = %d \n",res);
+				  break;
+		case '-' :printf("Sub : %d \n",num1 - num2 );
+				  break ;
+		case '*' :printf("MUL : %d \n",num1 * num2 );
+				  break ;
+		case '/' :if(num2 != 0)
+				  {
+					printf("div = %d \n",num1 / num2);
+				  }
+				  else
+				  {
+					printf("Num2/ divisor is ZERO \n");
+				  }
+				  break ;
+	   default :printf("Invalid Operator  \n");
+	   				break;
 	}
 
-	switch(dc )
-	{
-		case 'M' :printf("as a Manager \n");
-					break;
-		case 'S' :printf("as a Supervisor \n");
-					break;
-		case 's' :printf("as a sales\n");
-					break;
-		case 'C' :printf("as a clerk\n");
-					break;
-		
-				
-	}
 
 	return 0;
 }
+
+
 
